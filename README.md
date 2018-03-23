@@ -4,6 +4,8 @@
  - I only use this setup for local development. Use it at your own risk!
  - I do not recommend to run freeswitch as root on a publicly exposed 
    server. 
+ - Check the TODO.md before running this as something other than a pure
+   development system.
 
 ## Running locally
 Setup Ubuntu 16.04 LTS Server inside a VM locally. If you are
