@@ -1,0 +1,8 @@
+<include>
+    	<extension name="echo"> 
+    	<condition field="destination_number" expression="0000">
+    		<action application="answer"/>
+    		<action application="echo" data=""/>
+    	</condition>
+    </extension> 
+</includ>

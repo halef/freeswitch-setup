@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # TODO(langep):
-#   - Setup running as root
-#
+#   - Setup running as freeswitch user instead of root
+#   - Setup running as service
 set -e # Abort on error
 
 # Set paramaters

@@ -21,7 +21,7 @@
 
     <!-- Event Handlers -->
     <!-- <load module="mod_amqp"/> -->
-    <load module="mod_cdr_csv"/>
+    <!-- <load module="mod_cdr_csv"/> -->
     <!-- <load module="mod_cdr_sqlite"/> -->
     <!-- <load module="mod_event_multicast"/> -->
     <load module="mod_event_socket"/>
@@ -59,7 +59,7 @@
     <load module="mod_fifo"/>
     <load module="mod_hash"/>
     <!--<load module="mod_mongo"/> -->
-    <load module="mod_voicemail"/>
+    <!-- <load module="mod_voicemail"/> -->
     <!--<load module="mod_directory"/>-->
     <!--<load module="mod_distributor"/>-->
     <!--<load module="mod_lcr"/>-->
