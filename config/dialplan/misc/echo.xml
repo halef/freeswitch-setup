@@ -5,4 +5,4 @@
     		<action application="echo" data=""/>
     	</condition>
     </extension> 
-</includ>
+</include>
