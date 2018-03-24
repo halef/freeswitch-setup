@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# TODO(langep):
-#   - Setup running as freeswitch user instead of root
-#   - Setup running as service
 set -e # Abort on error
+
+# Locate this script.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Set paramaters
 # TODO(langep): Make parameters configurable
@@ -52,3 +52,16 @@ sed -i -e "s,#applications/mod_av,applications/mod_av," modules.conf
 CFLAGS=-Wno-unused CXXFLGAS=-Wno-unused ./configure --prefix=${install_location}
 make -j 4
 make install
+
+# Generate user and group
+# TODO(langep): Only create if they don't exist already.
+groupadd freeswitch
+useradd -r -s /bin/false -d ${install_location} -g freeswitch freeswitch
+
+chown -R freeswitch ${install_location}
+
+# Setup service
+cp ${SCRIPT_DIR}/init.d/freeswitch.init-debian /etc/init.d/freeswitch
+chmod +x /etc/init.d/freeswitch
+sed -i -e "s|%%FREESWITCH_HOME%%|${install_location}|g" /etc/init.d/freeswitch
+update-rc.d freeswitch defaults
