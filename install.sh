@@ -18,8 +18,10 @@ unpacked_dir_name=freeswitch-${version}
 # Cleanup trap in case of error
 cleanup() {
     if [ $? -ne 0 ]; then
+        # TODO(langep): Conditional cleanup based on where error happend
         rm -rf "$install_location"
         rm -rf "$download_location"/"$unpacked_dir_name"
+        rm /etc/init.d/freeswitch
     fi
 }
 
