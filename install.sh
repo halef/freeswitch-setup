@@ -65,3 +65,10 @@ cp ${SCRIPT_DIR}/init.d/freeswitch.init-debian /etc/init.d/freeswitch
 chmod +x /etc/init.d/freeswitch
 sed -i -e "s|%%FREESWITCH_HOME%%|${install_location}|g" /etc/init.d/freeswitch
 update-rc.d freeswitch defaults
+
+# Replace configuration
+rm -rf ${install_location}/etc/freeswitch/*
+cp -r ${SCRIPT_DIR}/config/* ${install_location}/etc/freeswitch/.
+
+# Echo success message
+echo "Run 'sudo service freeswitch start' to start freeswitch."
