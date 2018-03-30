@@ -9,6 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 download_location=~/src
 install_location=/opt/freeswitch
 version=1.6.20
+extern_ip=
 
 # Compute useful variables
 src=http://files.freeswitch.org/releases/freeswitch/freeswitch-${version}.tar.gz
@@ -60,8 +61,6 @@ make install
 groupadd freeswitch
 useradd -r -s /bin/false -d ${install_location} -g freeswitch freeswitch
 
-chown -R freeswitch ${install_location}
-
 # Setup service
 cp ${SCRIPT_DIR}/init.d/freeswitch.init-debian /etc/init.d/freeswitch
 chmod +x /etc/init.d/freeswitch
@@ -71,6 +70,8 @@ update-rc.d freeswitch defaults
 # Replace configuration
 rm -rf ${install_location}/etc/freeswitch/*
 cp -r ${SCRIPT_DIR}/config/* ${install_location}/etc/freeswitch/.
+
+chown -R freeswitch ${install_location}
 
 # Echo success message
 echo "Run 'sudo service freeswitch start' to start freeswitch."

@@ -271,6 +271,26 @@
       <param name="moh-sound" value="silence"/>
       <param name="comfort-noise" value="true"/>
     </profile>
-
+    
+    <profile name="myconference">
+      <param name="domain" value="$${domain}"/>
+      <param name="rate" value="8000"/>
+      <param name="channels" value="2"/>
+      <param name="interval" value="20"/>
+      <param name="energy-level" value="0"/>
+      <param name="caller-id-name" value="$${outbound_caller_name}"/>
+      <param name="caller-id-number" value="$${outbound_caller_id}"/>
+      <param name="comfort-noise" value="false"/>
+      <param name="conference-flags" value="video-floor-only|rfc-4579|livearray-sync|minimize-video-encoding"/>
+      <param name="video-mode" value="mux"/> 
+      <param name="video-layout-name" value="1x1"/>
+      <param name="video-canvas-size" value="640x480"/>
+      <param name="video-canvas-bgcolor" value="#333333"/>
+      <param name="video-layout-bgcolor" value="#000000"/>
+      <param name="video-codec-bandwidth" value="1mb"/>
+      <param name="video-fps" value="15"/>
+      <param name="auto-record" value="$${recordings_dir}/${conference_name}_${strftime(%Y-%m-%d-%H-%M-%S)}.mp4"/>
+      <param name="max-members" value="2"/>
+    </profile>
   </profiles>
 </configuration>
