@@ -6,7 +6,7 @@
     	</condition>
     </extension> 
 
-    <extension name="conference-echo">
+    <extension name="conference">
         <condition field="destination_number" expression="0001">
             <action application="answer"/>
             <action application="set" data="hangup_after_bridge=true"/>
