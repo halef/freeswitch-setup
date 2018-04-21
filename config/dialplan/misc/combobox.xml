@@ -5,7 +5,7 @@
             <action application="set" data="cb_ext=7729" />
             <action application="answer"/>
             <action application="playback" data="silence_stream://2000"/>
-            <action application="conference_set_auto_outcall" data="[conference_member_flags=endconf]sofia/gateway/comboboxk/${cb_ext}"/>
+            <action application="conference_set_auto_outcall" data="[conference_member_flags=endconf]sofia/gateway/combobox/${cb_ext}"/>
             <action application="conference" data="${destination}@myconference"/>
         </condition>
     </extension>
