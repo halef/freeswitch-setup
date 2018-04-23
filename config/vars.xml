@@ -255,8 +255,8 @@
        127 - BV32
 
   -->
-  <X-PRE-PROCESS cmd="set" data="global_codec_prefs=PCMU,PCMA,VP8,H264,OPUS,G722"/>
-  <X-PRE-PROCESS cmd="set" data="outbound_codec_prefs=PCMU,PCMA,VP8,H264,OPUS,G722"/>
+  <X-PRE-PROCESS cmd="set" data="global_codec_prefs=PCMU,PCMA"/>
+  <X-PRE-PROCESS cmd="set" data="outbound_codec_prefs=PCMU,PCMA"/>
   <X-PRE-PROCESS cmd="set" data="media_mix_inbound_outbound_codecs=true"/>
 
   <!--
