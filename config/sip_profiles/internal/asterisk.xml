@@ -1,0 +1,12 @@
+<include>
+  <gateway name="asterisk">
+    <param name="realm" value="%%ASTERISK_INTERNAL_IP_ADDRESS%%"/>
+    <param name="username" value="1000"/>
+    <param name="from-user" value="1000"/>
+    <param name="from-domain" value="%%FS_INTERNAL_IP_ADDRESS%%:5060"/>
+    <param name="password" value="$${PASSWORD_asterisk_password}"/>
+    <param name="register" value="true"/>
+    <param name="register-transport" value="udp"/>
+    <param name="ping" value="25"/>
+  </gateway>
+</include>
