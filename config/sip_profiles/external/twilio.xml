@@ -1,0 +1,12 @@
+
+<include>
+ <gateway name="Twilio-outbound">
+   <param name="tls-version" value="tlsv1"/>
+   <param name="register-transport" value="tls"/>
+   <param name="username" value="$${twilio_username}"/>
+   <param name="password" value="$${twilio_password}" />
+   <param name="proxy" value="$${twilio_domain}.pstn.twilio.com"/>
+   <param name="realm" value="sip.twilio.com"/>
+   <param name="register" value="false"/>
+ </gateway>
+</include>

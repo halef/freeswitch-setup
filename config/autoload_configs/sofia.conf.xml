@@ -12,14 +12,6 @@
 	protocol:host:port;hep=2;capture_id=200;
 
     -->
-
-    <param name="inbound-late-negotiation" value="false"/>
-    <param name="inbound-zrtp-passthru" value="false"/>
-    <param name="disable-transcoding" value="false"/>
-    <param name="inherit_codec" value="false"/>
-    <param name="bypass_media" value="false"/>
-    <param name="proxy_media" value="false"/>
-
     
     <!-- <param name="capture-server" value="udp:homer.domain.com:5060;hep=3;capture_id=100"/> -->
   </global_settings>
