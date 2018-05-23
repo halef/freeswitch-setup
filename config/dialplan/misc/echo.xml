@@ -10,8 +10,8 @@
         <condition field="destination_number" expression="0001">
             <action application="answer"/>
             <action application="set" data="hangup_after_bridge=true"/>
-			<action application="playback" data="silence_stream://2000"/>
-            <action application="conference" data="${destination_number}@myconference+flags{mintwo}"/>
+	    <action application="playback" data="silence_stream://2000"/>
+            <action application="conference" data="${destination_number}@myconference"/>
         </condition>
     </extension>
 </include>
