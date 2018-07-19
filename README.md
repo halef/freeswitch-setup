@@ -24,6 +24,11 @@ the `config/` directory. If freeswitch was already running, connect
 to the fs\_cli and run reloadxml. This is also necessary after changes
 to user accounts, dialplans and other xml files.
 
+Or run:
+```bash
+sudo bash update-conf.sh --aws
+```
+
 ## PASSWORDS
 Passwords are overwritten PASSWORDS.xml. Make sure to add it into the
 configuration directory. Furthermore, make sure to not share it with
