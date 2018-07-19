@@ -13,7 +13,7 @@ using Virtualbox, make sure to choose Bridged Network adapter in the
 settings. In other tools, choose an equivalent networking option.
 
 ## Installation
-Copy the `install.sh` script onto the machine and run:
+Copy or clone this repository onto the machine and run:
 ```bash
 sudo bash install.sh
 ```
