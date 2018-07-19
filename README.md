@@ -13,7 +13,7 @@ using Virtualbox, make sure to choose Bridged Network adapter in the
 settings. In other tools, choose an equivalent networking option.
 
 ## Installation
-Copy the `install.sh` script onto the machine and run:
+Copy or clone this repository onto the machine and run:
 ```bash
 sudo bash install.sh
 ```
@@ -23,6 +23,16 @@ Delete the default configuration files and copy in the files under
 the `config/` directory. If freeswitch was already running, connect
 to the fs\_cli and run reloadxml. This is also necessary after changes
 to user accounts, dialplans and other xml files.
+
+If you are on AWS, you could also run:
+```bash
+sudo bash update-conf.sh --aws
+```
+
+If not on AWS, you can run it with your public IP address (replace XXX.XXX.XXX.XXX with public IP)
+```bash
+sudo bash update-conf.sh XXX.XXX.XXX.XXX
+````
 
 ## PASSWORDS
 Passwords are overwritten PASSWORDS.xml. Make sure to add it into the
