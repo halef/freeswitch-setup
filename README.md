@@ -26,7 +26,7 @@ to user accounts, dialplans and other xml files.
 
 If you are on AWS, you could also run:
 ```bash
-sudo bash update-conf.sh --aws
+sudo bash update_conf.sh --aws
 ```
 
 If not on AWS, you can run it with your public IP address (replace XXX.XXX.XXX.XXX with public IP)
