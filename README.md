@@ -31,7 +31,7 @@ sudo bash update_conf.sh --aws
 
 If not on AWS, you can run it with your public IP address (replace XXX.XXX.XXX.XXX with public IP)
 ```bash
-sudo bash update-conf.sh XXX.XXX.XXX.XXX
+sudo bash update_conf.sh XXX.XXX.XXX.XXX
 ````
 
 ## PASSWORDS
