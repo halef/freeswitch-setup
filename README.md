@@ -26,7 +26,7 @@ to user accounts, dialplans and other xml files.
 
 Or run:
 ```bash
-sudo bash update-conf.sh --aws
+sudo bash update_conf.sh --aws
 ```
 
 ## PASSWORDS
