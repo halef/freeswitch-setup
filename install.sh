@@ -27,6 +27,9 @@ cleanup() {
 
 trap cleanup EXIT
 
+# Load heler.sh functions
+source ${SCRIPT_DIR}/helper.sh
+
 # Update packages and install dependencies
 apt-get update
 apt-get install -y --no-install-recommends \
@@ -73,4 +76,6 @@ cp -r ${SCRIPT_DIR}/config/* ${install_location}/etc/freeswitch/.
 chown -R freeswitch ${install_location}
 
 # Echo success message
-echo "Run 'sudo service freeswitch start' to start freeswitch."
+info "Installation complete."
+info "Run 'sudo service freeswitch start' to start freeswitch."
+info "Then run 'bash ${SCRIPT_DIR}/update-conf.sh [--aws]' next."
