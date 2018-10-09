@@ -9,7 +9,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 download_location=~/src
 install_location=/opt/freeswitch
 version=1.6.20
-extern_ip=
 
 # Compute useful variables
 src=http://files.freeswitch.org/releases/freeswitch/freeswitch-${version}.tar.gz
