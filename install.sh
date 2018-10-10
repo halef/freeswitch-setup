@@ -58,10 +58,14 @@ CFLAGS=-Wno-unused CXXFLGAS=-Wno-unused ./configure --prefix=${install_location}
 make -j 4
 make install
 
-# Generate user and group
-# TODO(langep): Only create if they don't exist already.
-groupadd freeswitch
-useradd -r -s /bin/false -d ${install_location} -g freeswitch freeswitch
+# Create group and user for freeswitch if they don't exist
+if ! check_group freeswitch; then
+    groupadd freeswitch
+fi
+
+if ! check_user freeswitch; then
+    useradd -r -s /bin/false -d ${install_location} -g freeswitch freeswitch
+fi
 
 # Setup service
 cp ${SCRIPT_DIR}/init.d/freeswitch.init-debian /etc/init.d/freeswitch
