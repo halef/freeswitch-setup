@@ -24,11 +24,16 @@ else
     external_ip=$1
 fi
 
+if [[ -z "$2" ]]; then
+    CONFIG_DIR=${SCRIPT_DIR}/config
+else
+    CONFIG_DIR=$2
+fi
 
 
 # Replace configuration
 rm -rf ${FS_HOME}/etc/freeswitch/*
-cp -r ${SCRIPT_DIR}/config/* ${FS_HOME}/etc/freeswitch/.
+cp -r ${CONFIG_DIR}/* ${FS_HOME}/etc/freeswitch/.
 
 sed -i -e "s|%%EXTERNAL_IP%%|${external_ip}|g" ${FS_HOME}/etc/freeswitch/vars.xml
 
