@@ -36,7 +36,8 @@ apt-get install -y --no-install-recommends \
     wget whois build-essential git pkg-config uuid-dev zlib1g-dev libjpeg-dev \
     libsqlite3-dev libcurl4-openssl-dev libpcre3-dev libspeexdsp-dev \
     libssl-dev libedit-dev yasm liblua5.2-dev libopus-dev libsndfile-dev \
-    libavformat-dev libavresample-dev libswscale-dev libldns-dev libpng-dev
+    libavformat-dev libavresample-dev libswscale-dev libldns-dev libpng-dev \
+    certbot
 
 # Make download and install directories
 mkdir -p "$download_location" "$install_location"
