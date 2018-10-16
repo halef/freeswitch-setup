@@ -38,12 +38,6 @@ apt-get install -y --no-install-recommends \
     libssl-dev libedit-dev yasm liblua5.2-dev libopus-dev libsndfile-dev \
     libavformat-dev libavresample-dev libswscale-dev libldns-dev libpng-dev
 
-# Install certbot
-apt-get install -y software-properties-common
-add-apt-repository -y ppa:certbot/certbot
-apt-get update
-apt-get install -y python-certbot-apache 
-
 # Make download and install directories
 mkdir -p "$download_location" "$install_location"
 
